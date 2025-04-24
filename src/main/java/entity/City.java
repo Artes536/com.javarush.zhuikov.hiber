@@ -1,10 +1,7 @@
 package entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
@@ -21,7 +18,7 @@ public class City {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "county_id")
+    @JoinColumn(name = "country_id")
     private Country country;
 
     @Column(name = "district")
